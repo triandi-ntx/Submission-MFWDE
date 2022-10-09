@@ -5,8 +5,12 @@ import CONFIG from '../../global/config';
 const card_layout = (resto) => `
     <div tabindex="0" class="card">
       <a title="home restoran" href="#/resto/${resto.id}" class="card-a-tag">
-        <div class="img-container">
-        <img tabindex="0" class="card-image" crossorigin="anonymous" alt="${resto.name}" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}"/>
+      <div class="img-container">
+      <img tabindex="0" class="card-image lazyload" crossorigin="anonymous" 
+      src="./images/loading-300.jpg"
+        alt="${resto.name}" 
+        data-src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}"
+      />
       <span tabindex="0" class="card-rating">
         <i title="ratings" class="fa fa-star"></i>
         <span>${resto.rating}</span>

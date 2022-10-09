@@ -10,7 +10,6 @@ class Navbar extends HTMLElement {
           <div>
             <a href="/" class="logo-font">Restaurant Kita</a>
           </div>
-
           <div class="menu-container">
             <button
               class="menu"
@@ -19,17 +18,11 @@ class Navbar extends HTMLElement {
             </button>
           </div>
         </div>
-
         <ul class="nav-list">
           <li class="nav-item"><a href="/">Home</a></li>
           <li class="nav-item"><a href="#/favorite">Favorite</a></li>
           <li class="nav-item">
-          <a
-          href="https://github.com/blog-triandi/"
-          target="_blank"
-          rel="noopener "
-          >About</a
-        >
+          <a href="https://github.com/blog-triandi/" target="_blank" rel="noopener ">About</a >
       </li>
       <li class="nav-item">
         <button
@@ -37,8 +30,7 @@ class Navbar extends HTMLElement {
           aria-label="button for toggle light or dark mode"
           type="button"
           id="dark-mode"
-          class="light"
-        >
+          class="light">
           <i class="fas fa-moon"></i>
         </button>
         </ul>

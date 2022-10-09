@@ -8,7 +8,7 @@ class HeroContent extends HTMLElement {
       <div tabindex="0" class="hero__text">
         <h1 class="hero__title">Welcome to Restaurant Kita</h1>
         <p class="hero__subtitle">
-         estaurants just great food and Drinks Delicious
+        Our restaurant not only serves delicious food but also serves refreshing drinks
         </p>
         <a href="#main-content" class="submit-btn">Read More</a>
       </div>

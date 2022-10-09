@@ -10,10 +10,8 @@ const Home = {
     return `
       <div class="container">
         <div id="loading"></div>
-
         <div id="main-container">
           <h1 tabindex="0" class="main-content__title">List Restaurant</h1>
-
           <section id="explore-restaurant"></section>
         </div>
       </div>

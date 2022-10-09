@@ -1,15 +1,13 @@
 import FavRestoIdb from '../../data/resto-idb';
-// eslint-disable-next-line camelcase
-import card_layout from '../templates/card-layout';
+import restoCard from '../templates/card-layout';
 
 const Favorite = {
   async render() {
     return `
       <div class="container">
-      <div id="loading"></div>
         <h2 class="title-container">Favorited Resto</h2>
 
-        <section tabindex="0" id="fav-resto"></section>
+        <section id="fav-resto"></section>
       </div>
     `;
   },
@@ -29,7 +27,7 @@ const Favorite = {
 
     // display all fav resto
     data.forEach((resto) => {
-      favRestoContainer.innerHTML += card_layout(resto);
+      favRestoContainer.innerHTML += restoCard(resto);
     });
   },
 };

@@ -1,17 +1,17 @@
+/* eslint-disable no-undef */
 import UrlParser from '../../routes/url-parser';
 import Spinner from '../templates/spinner';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
+import favRestoIdb from '../../data/resto-idb';
 import RestaurantSource from '../../data/resto-source';
 import DETAIL_LAYOUT from '../templates/detail-layout';
 import { initSwalError } from '../../utils/swal-initiator';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
     return `
       <div class="container">
         <div id="loading"></div>
-
-      
         <div id="main-container">
           <h2 class="title-container">Detail Restaurant</h2>
           <section id="detail-resto"></section>
@@ -42,9 +42,10 @@ const Detail = {
       detailContainer.innerHTML += DETAIL_LAYOUT(data.restaurant);
 
       // init like button
-      LikeButtonInitiator.init({
-        likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      LikeButtonPresenter.init({
         data,
+        favRestoIdb,
+        likeButtonContainer: document.querySelector('#likeButtonContainer'),
       });
 
       // change spinner display to main

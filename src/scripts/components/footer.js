@@ -11,7 +11,7 @@ class footerBar extends HTMLElement {
         Copyright © 2021 - Restaurant Kita
       </li>
       <li>
-        Submision 2 with <i title="love" class="fa fa-heart"></i> by
+        Submision 3 with <i title="love" class="fa fa-heart"></i> by
         Triandii
       </li>
     </ul>
