@@ -1,173 +1,13 @@
 /*
- *  root settings
-*/
+ * main
+ */
 
-:root {
-    --primary-color: #ffffff;
-    --secondary-color: #f0e3ca;
-    --font-color: #1b1a17;
-    --navbar-hover: #f0e3ca;
-    --btn: #ff8303;
-    --btn-hover: #a35709;
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  
-  }
-  
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color: var(--font-color);
-  }
-  
-
- /* * header */
-
-
- .hero {
-  display: flex;
-  flex-direction: column;
-  min-height: 600px;
-  width: 100%;
-  text-align: center;
-  background: url('./images/heros/hero.jpg');
-  background-position: center;
-  object-fit: cover;
-  padding: 0 10%;
-}
-
-.hero__text {
-  align-self: center;
-  max-width: 600px;
-  margin: auto 0;
-  padding-bottom: 3em;
-}
-
-.hero__title {
-  color: var(--secondary-color);
-  font-weight: 500;
-  font-size: xx-large;
-}
-
-.hero__subtitle {
-  color: var(--primary-color);
-  margin: 16px;
-  margin-bottom: 30px;
-  font-size: 18px;
-  font-weight: 300;
-  word-spacing: 2px;
-  line-height: 1.36em;
-}
-
-
-/* * nav */
-
-
-nav {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.3em;
-  height: 75px;
-}
-
-.menu {
-  font-size: 25px;
-  display: none;
-  width: 25px;
-  color: var(--primary-color);
-  min-width: 44px;
-  min-height: 44px;
-}
-
-.menu:hover {
-  cursor: pointer;
-}
-
-.logo-font {
-  font-size: x-large;
-  font-weight: bold;
-  color: var(--primary-color);
-  text-decoration: none;
-  padding: 0.4em 0;
-  min-width: 44px;
-  min-height: 44px;
-}
-
-.nav-list {
-  display: flex;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  flex-wrap: wrap;
-  transition: ease;
-}
-
-.nav-item {
-  box-sizing: border-box;
-  line-height: 24px;
-}
-
-.nav-item a {
-  padding: 0.7rem;
-  display: inline-block;
-  font-size: 1.3em;
-  text-decoration: none;
-  color: var(--primary-color);
-  min-height: 44px;
-  min-width: 44px;
-}
-
-.nav-item button {
-  padding: 0.9rem;
-  background-color: transparent;
-  border: 0 solid transparent;
-  color: var(--primary-color);
-  cursor: pointer;
-  font-size: 1.3;
-  vertical-align: middle;
-  min-height: 44px;
-  min-width: 44px;
-}
-
-.nav-item a:hover {
-  text-decoration: underline;
-  color: var(--navbar-hover);
-  cursor: pointer;
-}
-
-.nav-item button:hover {
-  text-decoration: underline;
-  color: var(--navbar-hover);
-  cursor: pointer;
-}
-
-
- /* * main */
-
-
- main {
+main {
   width: 100%;
   margin: 0 auto;
 }
 
-.main-content__container {
+.container {
   margin: 2em 10%;
   padding: 1em;
 }
@@ -183,9 +23,9 @@ nav {
   padding-top: 1.5em;
 }
 
-
- /* * Cards */
-
+/*
+ * Cards
+ */
 
 .card {
   width: 100%;
@@ -196,7 +36,12 @@ nav {
 }
 
 .card:hover {
-  box-shadow: 10px 10px 5px 0px var(--secondary-color);
+  box-shadow: 10px 10px 5px 0 var(--secondary-color);
+}
+
+.card-a-tag {
+  text-decoration: none;
+  color: var(--font-color);
 }
 
 .card-rating {
@@ -220,14 +65,14 @@ nav {
   width: 100%;
   position: relative;
   overflow: hidden;
-  transition: transform 0.5s ease;
   max-height: 600px;
 }
 
 .card-image {
-  object-fit: cover;
-  height: 100%;
   width: 100%;
+  height: 270px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card-content {
@@ -239,6 +84,7 @@ nav {
 .card-content-title {
   font-weight: bold;
   padding-bottom: 0.376em;
+  color: var(--btn);
 }
 
 .truncate {
@@ -249,39 +95,12 @@ nav {
   -webkit-box-orient: vertical;
 }
 
-
-  /* Skip link */
-  .skip-link {
-    position: absolute;
-    top: -80px;
-    left: 0;
-    background-color: var(--btn);
-    color: white;
-    padding: 8px;
-    z-index: 10;
-  }
-  
-  .skip-link:focus {
-    top: 0;
-  }
-  
-  /* Button */
-  
-  .btn {
-    margin: 2em;
-    padding: 0.5em 1em;
-    font-weight: 700;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    background-color: var(--btn);
-    border: 1px solid transparent;
-    font-size: large;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .btn:hover {
-    background-color: var(--btn-hover);
-  }
-  
+.card-image-zoom{
+  overflow: hidden;
+}
+.card-image-zoom img{
+ transition: transform .5s ease;
+}
+.card-image-zoom:hover img{
+ transform: scale(1.5);
+}
